@@ -11,8 +11,6 @@ namespace Dictionary
         static string pathRus = @"C:\Dictionary\rus.txt";
         static void Main()
         { 
-            FileInfo eng = new FileInfo(pathEng);
-            FileInfo rus = new FileInfo(pathRus);
             File.WriteAllTextAsync(pathEng, "Hello\nApple\nCity\n");
             File.WriteAllTextAsync(pathRus, "Привет\nЯблоко\nГород\n");
 
