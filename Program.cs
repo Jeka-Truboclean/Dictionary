@@ -11,8 +11,8 @@ namespace Dictionary
         static string pathRus = @"C:\Dictionary\rus.txt";
         static void Main()
         { 
-            File.WriteAllTextAsync(pathEng, "hello\napple\ncity\n");
-            File.WriteAllTextAsync(pathRus, "привет\nяблоко\nгород\n");
+            File.WriteAllText(pathEng, "hello\napple\ncity\n");
+            File.WriteAllText(pathRus, "привет\nяблоко\nгород\n");
 
             bool running = true;
             while (running)
@@ -126,8 +126,8 @@ namespace Dictionary
         }
         static void AddWord(string wordRus, string wordEng)
         {
-            File.AppendAllTextAsync(pathEng, $"{wordEng}\n");
-            File.AppendAllTextAsync(pathRus, $"{wordRus}\n");
+            File.AppendAllText(pathEng, $"{wordEng}\n");
+            File.AppendAllText(pathRus, $"{wordRus}\n");
         }
         static void DeleteWord(string word)
         {
@@ -150,8 +150,8 @@ namespace Dictionary
                 {
                     if (lines[i] != null)
                     {
-                        File.AppendAllTextAsync(pathRus, $"{lines2[i]}\n");
-                        File.AppendAllTextAsync(pathEng, $"{lines[i]}\n");
+                        File.AppendAllText(pathRus, $"{lines2[i]}\n");
+                        File.AppendAllText(pathEng, $"{lines[i]}\n");
                     }
                 }
             }
@@ -174,8 +174,8 @@ namespace Dictionary
                 {
                     if (lines[i] != null)
                     {
-                        File.AppendAllTextAsync(pathRus, $"{lines[i]}\n");
-                        File.AppendAllTextAsync(pathEng, $"{lines2[i]}\n");
+                        File.AppendAllText(pathRus, $"{lines[i]}\n");
+                        File.AppendAllText(pathEng, $"{lines2[i]}\n");
                     }
                 }
             }
