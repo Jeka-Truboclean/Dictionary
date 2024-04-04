@@ -11,8 +11,8 @@ namespace Dictionary
         static string pathRus = @"C:\Dictionary\rus.txt";
         static void Main()
         { 
-            File.WriteAllTextAsync(pathEng, "Hello\nApple\nCity\n");
-            File.WriteAllTextAsync(pathRus, "Привет\nЯблоко\nГород\n");
+            File.WriteAllTextAsync(pathEng, "hello\napple\ncity\n");
+            File.WriteAllTextAsync(pathRus, "привет\nяблоко\nгород\n");
 
             bool running = true;
             while (running)
@@ -68,7 +68,7 @@ namespace Dictionary
                         rusWord = Console.ReadLine();
                         Console.WriteLine("Введите слово на английском:");
                         engWord = Console.ReadLine();
-                        AddWord(rusWord, engWord);
+                        ChangeWord(delWord, rusWord, engWord);
                         Console.WriteLine(new string('_', 30));
                         break;
                     case "6":
